@@ -1,16 +1,31 @@
+/* styles/global.css */
+
+html {
+  -webkit-print-color-adjust: exact; /* This makes sure that the PDF is rendered exactly like our layout. */
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #f1f5f9; /* Light gray background */
+  width: 100%;
+  height: 100%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Next.js mounting point. Create a full width/height container for our page. */
+#__next {
+  height: 100vh;
+  display: grid;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Important to keep absolute as you don't want this to be rendered by the PDF. */
+.downloadBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
